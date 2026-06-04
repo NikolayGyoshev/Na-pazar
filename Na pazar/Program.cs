@@ -8,22 +8,27 @@ namespace Na_pazar
     {
         static void Main(string[] args)
         {
-            // За --> "?? string.Empty;"
+           
             // Четене на ред от конзолата. Ако ReadLine() върне null,
-            // използваме празен низ.
-            // '??' е операторът за обединяване на null: ляво, ако не е null,
-            // в противен случай дясно.
+            // използваме празен низ ("").
+
+
+
 
 
 
             // прочитаме двата заглавни реда и всички команди до END
-            string peopleLine = Console.ReadLine() ?? string.Empty;
-            string productsLine = Console.ReadLine() ?? string.Empty;
+            string peopleLine = Console.ReadLine();
+            if (peopleLine == null) peopleLine = "";
+
+            string productsLine = Console.ReadLine();
+            if (productsLine == null) productsLine = "";
 
             List<string> commandLines = new List<string>();
             while (true)
             {
-                string line = Console.ReadLine() ?? string.Empty;
+                string line = Console.ReadLine();
+                if (line == null) line = "";
                 commandLines.Add(line);
                 if (line == "END") break;
             }
@@ -134,7 +139,7 @@ namespace Na_pazar
             }
 
             Console.WriteLine(" ");
-             Console.WriteLine("----------~~~~~~~~----------");
+            Console.WriteLine("----------~~~~~~~~----------");
 
             for (int i = 0; i < outputs.Count; i++)
             {

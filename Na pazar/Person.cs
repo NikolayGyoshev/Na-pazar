@@ -24,7 +24,7 @@ namespace Na_pazar
             set { money = value; }
         }
 
-        // Simpler Bag property: returns a copy as string[] (no IReadOnlyList / AsReadOnly)
+        // Свойство Simpler Bag: връща копие като string[] 
         public string[] Bag
         {
             get { return bag.ToArray(); }
