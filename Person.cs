@@ -1,4 +1,5 @@
-﻿using System;
+Na pazar\Person.cs
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -68,4 +69,3 @@ namespace Na_pazar
         }
     }
 }
-
